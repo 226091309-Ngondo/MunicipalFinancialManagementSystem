@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main() {
+    double salary[50];
+    int i;
+    double total=0.00;
+    double average=0.00;
+    double high=0.00;
+    double low=0.00;
+
+    for(i=0;i<50;i++){
+        printf("Enter salary:");
+        scanf("%lf",&salary[i]);
+    }
+    high=salary[0];
+    low=salary[0];
+    for(i=0;i<50;i++){
+        total=total+salary[i];
+        if(salary[i]>high){
+            high=salary[i];
+        }
+        if(salary[i]<low){
+            low=salary[i];
+        }
+    }
+    average=total/50;
+    printf("Total Salary is:%.2f\n", total);
+    printf("Average salary is:%.2f\n", average);
+    printf("The Highest Salary is:%.2f\n",high);
+    printf("The Lowest Salary is:%.2f\n", low);
+    return 0;
+}
