@@ -1,0 +1,54 @@
+#include <stdio.h> 
+ 
+int main() { 
+
+
+ double revenue; 
+ double expenses; 
+ double balance;
+ int departments; 
+ double payroll; 
+ double procurement; 
+ double assets;
+
+ printf("MUNICIPAL BUDGET CALCULATOR\n"); 
+ printf("---------------------------\n");
+
+ printf("Enter total revenue: "); 
+ scanf("%.lf", &revenue); 
+ printf("Enter total expenses: "); 
+ scanf("%.lf", &expenses); 
+ 
+balance = revenue - expenses;
+ 
+ printf("Enter department: ");
+ scanf("%d",&departments);
+
+ printf("Enter your payroll: ");
+ scanf("%f",&payroll);
+
+ printf("Enter your procurement: ");
+ scanf("%f", &procurement);
+
+ printf("Enter your assets; ");
+ scanf("%f', &assets);
+
+   printf("\nRevenue: %.2f\n", revenue); 
+   printf("Expenses: %.2f\n", expenses); 
+   printf("%d\n", departments);
+   printf('%f\n", payroll);
+   printf("%f\n", procurement);
+   printf("%f\n", assets);
+
+
+   if (balance > 0) { 
+   printf("Surplus: %.2f\n", balance); 
+ } 
+   else if (balance < 0) { 
+   printf("Deficit: %.2f\n", -balance); 
+ } 
+   else { 
+   printf("The budget is balanced.\n"); 
+ } 
+   return 0; 
+ }
